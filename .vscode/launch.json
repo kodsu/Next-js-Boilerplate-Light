@@ -5,11 +5,15 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "chrome",
+      "name": "Next.js: debug in Browser",
+      "type": "node-terminal",
       "request": "launch",
-      "name": "Next: Chrome",
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}"
+      "command": "npm run dev --inspect",
+      "serverReadyAction": {
+        "pattern": "started server on .+, url: (https?://.+)",
+        "uriFormat": "%s",
+        "action": "debugWithEdge"
+      },
     },
     {
       "type": "node",
@@ -25,7 +29,7 @@
   "compounds": [
     {
       "name": "Next: Full",
-      "configurations": ["Next: Node", "Next: Chrome"]
+      "configurations": ["Next: Node", "Next.js: debug in Browser"]
     }
   ]
 }

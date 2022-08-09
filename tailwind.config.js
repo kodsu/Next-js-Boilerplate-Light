@@ -14,6 +14,12 @@ module.exports = {
       '5xl': '3rem',
       '6xl': '4rem',
     },
+    fontFamily: {
+      museo: ['Museo Sans 500'],
+      avenir: ['Avenir Next'],
+      inter: ['Inter'],
+      neuzeit: ['Neuzeit'],
+    },
     extend: {
       colors: {
         gray: {
@@ -41,5 +47,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
