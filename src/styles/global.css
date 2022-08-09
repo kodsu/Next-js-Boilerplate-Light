@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 a {
   @apply text-blue-700;
@@ -8,14 +10,47 @@ a:hover {
   @apply border-b-2 border-blue-700;
 }
 
-@tailwind components;
-
-@tailwind utilities;
-
 .content p {
   @apply my-6;
 }
 
 .content ul {
   @apply my-6;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../public/assets/fonts/AvenirNext-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  src: url("../../public/assets/fonts/MuseoSans_500.otf");
+}
+
+@font-face {
+  font-family: "Neuzeit";
+  src: url("../../public/assets/fonts/Neuzeit.otf");
+}
+
+body {
+  height: 100vh;
+}
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* The hack for Safari */
+    height: -webkit-fill-available;
+  }
+}
+
+
+@layer utilities {
+  .animate {
+    @apply transition-all duration-500 ease-in-out;
+  }
+  .no-animate {
+    @apply transition-none;
+  }
 }

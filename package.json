@@ -8,8 +8,7 @@
     "export": "next export",
     "build-prod": "run-s clean build export",
     "clean": "rimraf .next out",
-    "lint": "next lint",
-    "check-types": "tsc --noEmit --pretty"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "^12.2.2",
